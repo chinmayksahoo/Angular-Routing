@@ -1,0 +1,34 @@
+{
+  "LoginData": [
+    {
+      "Email": "admin@email.com",
+      "Name": "admin",
+      "Password": "password",
+      "id": 1
+    },
+    {
+      "Email": "abc@email.com",
+      "Name": "abc",
+      "Password": "Password@2021",
+      "id": 2
+    },
+    {
+      "Email": "user@email.com",
+      "Name": "UserName",
+      "Password": "Password@2021",
+      "id": 3
+    },
+    {
+      "Email": "abcd@email.com",
+      "Name": "Lance",
+      "Password": "Password@2021",
+      "id": 4
+    },
+    {
+      "Email": "abcde@email.com",
+      "Name": "abcde",
+      "Password": "Password@2021",
+      "id": 5
+    }
+  ]
+}

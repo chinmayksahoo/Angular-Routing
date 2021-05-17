@@ -1,0 +1,52 @@
+<div class="RegisterClass">
+    <br>
+    <form [formGroup]="registerForm" (ngSubmit)="onSignUp()">
+        <div>
+            <mat-label>Email Id </mat-label>
+            <input matInput type="email" placeholder="Email Id" value={{temail}} formControlName="iemail" [(ngModel)]="log.Email">
+            <span style="display: block; color: red;" *ngIf="(iemail.invalid) && (iemail.touched)">
+                <span *ngIf="iemail.errors.required">
+                    Email Can't be Blank
+                </span>
+                <span style="display: block; color: red;" *ngIf="iemail.errors.email">
+                    Invalid Email Id
+                </span>
+            </span>
+
+        </div><br>
+        <div>
+            <mat-label>User Name </mat-label>
+            <input matInput type="text" placeholder="User name" value={{tname}} formControlName="loginname" [(ngModel)]="log.Name">
+            <span style="display: block; color: red;" *ngIf="(loginname.invalid) && (loginname.touched)">
+                Username Can't be Blank
+            </span>
+        </div><br>
+        <div>
+            <mat-label>Pasword </mat-label>
+            <input matInput type="password" placeholder="Password" formControlName="password" [(ngModel)]="log.Password">
+            <span style="display: block; color: red;" *ngIf="(password.invalid) && (password.touched)">
+                <span *ngIf="password.errors.required">
+                    Password Can't be Blank
+                </span>
+                <span style="display: block; color: red;" *ngIf="password.errors.minlength">
+                    Password length can't be less than 8
+                </span>
+            </span>
+
+        </div><br>
+        <div>
+            <mat-label>Retype Pasword </mat-label>
+            <input matInput type="password" placeholder="Retype Password" formControlName="rpassword">
+            <!-- <span style="display: block; color: red;" *ngIf="password.value !== rpassword.value && (rpassword.touched)"> -->
+            <span style="display: block; color: red;" *ngIf="checkPasswords() && (rpassword.touched)">    
+                Password doesn't Match
+            </span>
+        </div><br>
+        <div>
+            <!-- <button mat-raised-button color="primary" class="lbutton">Sign Up</button>
+            <button mat-raised-button color="primary" class="lbutton">Cancel</button> -->
+            <input type="submit" value="Sign Up" [disabled]="registerForm.invalid">
+            <!-- <input type="submit" value="Sign Up" [disabled]="!registerForm.valid"> -->
+        </div>
+    </form>
+</div>

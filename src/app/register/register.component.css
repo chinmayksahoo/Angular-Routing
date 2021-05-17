@@ -1,0 +1,23 @@
+.RegisterClass{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 30vh;
+    flex-shrink: 1;
+    flex-grow: 1;
+    text-align: center;
+    align-content: center;
+    background-color: dodgerblue;
+    margin-left: 40vw;
+    margin-right: 40vw;
+    margin-top: 10vh;
+    border-radius: 5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+    color: navy;
+    font-size: 20px;
+}
+
+.lbutton{
+    margin: 10px;
+}

@@ -1,0 +1,76 @@
+{
+  "InsuranceData": [
+    {
+      "Name": "Joe",
+      "Plan": "HMO",
+      "Duration": "20",
+      "id": 1
+    },
+    {
+      "Name": "Lance",
+      "Plan": "PPO",
+      "Duration": "10",
+      "id": 2
+    },
+    {
+      "Name": "Rocky",
+      "Plan": "HSA",
+      "Duration": "25",
+      "id": 3
+    },
+    {
+      "Name": "John",
+      "Plan": "HMO",
+      "Duration": "25",
+      "id": 4
+    },
+    {
+      "Name": "Palmer",
+      "Plan": "MHMO",
+      "Duration": "20",
+      "id": 5
+    },
+    {
+      "Name": "Henery",
+      "Plan": "HMO",
+      "Duration": "18",
+      "id": 6
+    },
+    {
+      "Name": "Andy",
+      "Plan": "HMO",
+      "Duration": "10",
+      "id": 7
+    },
+    {
+      "Name": "Jonathan",
+      "Plan": "ASO",
+      "Duration": "15",
+      "id": 8
+    },
+    {
+      "Name": "Mike",
+      "Plan": "PDO",
+      "Duration": "18",
+      "id": 9
+    },
+    {
+      "Name": "Leonard",
+      "Plan": "HMO",
+      "Duration": "12",
+      "id": 10
+    },
+    {
+      "Name": "Roman",
+      "Plan": "VAHMO",
+      "Duration": "25",
+      "id": 11
+    },
+    {
+      "Name": "Lance",
+      "Plan": "HMO",
+      "Duration": "20",
+      "id": 12
+    }
+  ]
+}

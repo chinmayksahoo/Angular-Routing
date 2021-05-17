@@ -1,0 +1,24 @@
+<div class="AddIns">
+    <div>
+        <mat-panel-title>
+            Add Insurance Details
+        </mat-panel-title>
+    </div><br>
+    <div>
+        <mat-label>User Name </mat-label>
+        <input matInput type="text" placeholder="User Name" [(ngModel)]="ins.Name">
+    </div>
+    <div>
+        <mat-label>Plan Name </mat-label>
+        <input matInput type="text" placeholder="Plan Name" [(ngModel)]="ins.Plan">
+    </div>
+    <div>
+        <mat-label>Duration </mat-label>
+        <input matInput type="text" placeholder="Duration" [(ngModel)]="ins.Duration">
+    </div>
+    <br>
+    <div>
+        <button mat-raised-button color="primary" class="lbutton" (click)="addIns()">Add</button>
+        <button mat-raised-button color="primary" class="lbutton">Cancel</button>
+    </div>
+</div>

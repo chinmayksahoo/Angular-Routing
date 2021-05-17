@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button color="accent" aria-label="Example icon button with a home icon" routerLink="">
+        <mat-icon>home</mat-icon>
+    </button>
+    <span>Legato Health Technology</span>
+    <span class="example-spacer"></span>
+    <ul>
+        <li><a routerLink="login">Login</a></li>
+        <li><a routerLink="register">Register</a></li>
+    </ul>
+    <span class="example-spacer"></span>
+    <div>
+        <button mat-raised-button color="warn" class="wbutton" (click)="Login()" *ngIf="!switch">Login</button>
+        <button mat-raised-button color="accent" class="wbutton" (click)="Register()" *ngIf="!switch">Register</button>
+        <button mat-raised-button color="primary" class="wbutton" routerLink='/dashboard' *ngIf="switch">Dashboard</button>
+        <button mat-icon-button color="accent" class="wbutton" (click)="Logout()" *ngIf="switch">
+            <mat-icon>power_settings_new</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>

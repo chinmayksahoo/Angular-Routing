@@ -1,0 +1,16 @@
+table{
+    width: 100%;
+    border: 1px solid black;
+}
+
+th, td{
+    border: 1px solid yellow;
+    width: 5vw;
+    height: 1vh;
+    background-color: lightseagreen;
+}
+
+.mat-header-cell{
+    background-color: blueviolet;
+    font-weight: bold;
+}

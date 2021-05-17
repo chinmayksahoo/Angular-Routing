@@ -1,0 +1,14 @@
+.DashOutlet{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 20vh;
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: blue;
+    font: italic small-caps bold 35px/40px Georgia, serif;
+}

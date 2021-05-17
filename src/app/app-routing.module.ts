@@ -1,7 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddInsuranceComponent } from './add-insurance/add-insurance.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginGuard } from './Guard/login.guard';
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RegisterComponent } from './register/register.component';
+import { ShowInsuranceComponent } from './show-insurance/show-insurance.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:'login', component:LoginComponent},
+  {path:'register/:name/:email', component:RegisterComponent},
+  {path:'register', component:RegisterComponent},
+  {
+    path:'dashboard', 
+    component:DashboardComponent,
+    canActivate:[LoginGuard],
+    children:[
+      {path:'show-ins', component:ShowInsuranceComponent},
+      {path:'add-ins', component:AddInsuranceComponent}
+    ]
+  },
+  {path:'', component:LoginComponent},
+  {path:'**',component:PageNotFoundComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

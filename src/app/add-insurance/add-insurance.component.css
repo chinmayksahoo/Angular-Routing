@@ -1,0 +1,17 @@
+.AddIns{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: indigo;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 20vw;
+    background-color: lightcoral;
+    padding: 5%;
+    border: solid 2px lightsalmon;
+}
+
+.lbutton{
+    margin-left: 10px;
+}

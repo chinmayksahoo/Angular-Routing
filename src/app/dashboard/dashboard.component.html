@@ -1,0 +1,20 @@
+<p>Dashboard</p>
+<nav>
+    <ul>
+        <li>
+            <a routerLink="add-ins">Add Insurance</a><br>
+            <button mat-raised-button color="warn" (click)="addInsurance()">Add Insurance</button>
+        </li>
+        <li>
+            <a routerLink="show-ins" (click)="showIns()">Show Insurance</a>
+        </li>
+        <li>
+            <a routerLink="../login">Login</a>
+        </li>
+    </ul>
+</nav>
+<div class="DashOutlet">
+    <router-outlet>
+
+    </router-outlet>
+</div>

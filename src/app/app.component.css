@@ -1,0 +1,11 @@
+.RouterOutlet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    height: 45vh;
+    background-color: cornflowerblue;
+    align-content: center;
+    margin: 10vh 15vw 10vh 15vw;
+    padding: 05% 0% 05% 0%;
+}
