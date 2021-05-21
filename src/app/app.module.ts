@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,10 @@ import { ShowInsuranceComponent } from './show-insurance/show-insurance.componen
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
+import { MyPipePipe } from './my-pipe.pipe';
+import { MyPlanPipePipe } from './my-plan-pipe.pipe';
+import { EditInsComponent } from './edit-ins/edit-ins.component';
+import { MyeffectDirective } from './myeffect.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,11 @@ import { FooterComponent } from './footer/footer.component';
     AddInsuranceComponent,
     ShowInsuranceComponent,
     PageNotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    MyPipePipe,
+    MyPlanPipePipe,
+    EditInsComponent,
+    MyeffectDirective
   ],
   imports: [
     BrowserModule,
@@ -45,7 +54,8 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     MatExpansionModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

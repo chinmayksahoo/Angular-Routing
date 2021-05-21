@@ -20,4 +20,10 @@ export class InsuranceService {
     return this.client.post<Insurance>("http://localhost:3001/InsuranceData",ins)
   }
 
+  updateInsurance(ins:Insurance):Observable<Insurance>{
+    // console.log(ins.id)
+    // console.log(`http://localhost:3001/InsuranceData/${Number(ins.id)}`)
+    return this.client.put<Insurance>(`http://localhost:3001/InsuranceData/${Number(ins.id)}`,ins)
+  }
+
 }

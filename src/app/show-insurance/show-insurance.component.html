@@ -1,32 +1,15 @@
-<table mat-table [dataSource]="insurances" class="mat-elevation-z8">
+<div class="display" fxLayout="row">
+  <mat-card class="card" *ngFor="let ins of insurances" (click)="clickCard(ins)">
+    <mat-card-title class="card-title">
+      <a>Insurance Id: {{ins.id}}</a>
+    </mat-card-title>
+    <mat-card-content class="card-content">
+      <a>Name: {{ins.Name}}</a><br>
+      <a>Plan: {{ins.Plan}}</a><br>
+      <a>Duration: {{ins.Duration}}</a>
+    </mat-card-content>
+  </mat-card>
+</div>
+<router-outlet>
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-  
-    <!-- ID Column -->
-    <ng-container matColumnDef="ID">
-      <th mat-header-cell *matHeaderCellDef> ID </th>
-      <td mat-cell *matCellDef="let insurance"> {{insurance.id}} </td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="Name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let insurance"> {{insurance.Name}} </td>
-    </ng-container>
-  
-    <!-- Plan Column -->
-    <ng-container matColumnDef="Plan">
-      <th mat-header-cell *matHeaderCellDef> Plan </th>
-      <td mat-cell *matCellDef="let insurance"> {{insurance.Plan}} </td>
-    </ng-container>
-  
-    <!-- Duration Column -->
-    <ng-container matColumnDef="Duration">
-      <th mat-header-cell *matHeaderCellDef> Duration </th>
-      <td mat-cell *matCellDef="let insurance"> {{insurance.Duration}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>  
+</router-outlet>

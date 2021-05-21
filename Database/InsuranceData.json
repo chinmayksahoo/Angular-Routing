@@ -1,16 +1,16 @@
 {
   "InsuranceData": [
     {
-      "Name": "Joe",
+      "id": 1,
+      "Name": "Joey",
       "Plan": "HMO",
-      "Duration": "20",
-      "id": 1
+      "Duration": "20"
     },
     {
+      "id": 2,
       "Name": "Lance",
-      "Plan": "PPO",
-      "Duration": "10",
-      "id": 2
+      "Plan": "HMO",
+      "Duration": "12"
     },
     {
       "Name": "Rocky",
@@ -71,6 +71,12 @@
       "Plan": "HMO",
       "Duration": "20",
       "id": 12
+    },
+    {
+      "id": 13,
+      "Name": "Amalia",
+      "Plan": "ASO-M",
+      "Duration": "25"
     }
   ]
 }

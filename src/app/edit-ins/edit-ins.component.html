@@ -1,0 +1,16 @@
+<div appMyEffect = "color" outColor = "oColor">
+    <div>
+        ID<input type="number" placeholder="ID" [value]="id" disabled>
+    </div>
+    <div>
+        Name<input type="text" placeholder="Name" [value]="name" (input)="name=$event.target.value">
+    </div>
+    <div>
+        Plan<input type="text" placeholder="Plan" [value]="plan" (input)="plan=$event.target.value">
+    </div>
+    <div>
+        Duration<input type="number" placeholder=0 [value]="dur" (input)="dur=$event.target.value">
+    </div>
+    <button (click)="editInsurance()">Update</button>
+</div>
+<p appMyeffect>This is modified by Custom Directive</p>

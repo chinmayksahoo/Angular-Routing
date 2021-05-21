@@ -14,3 +14,42 @@ th, td{
     background-color: blueviolet;
     font-weight: bold;
 }
+
+.paginator{
+    width: 100%;
+    display: inline;
+    background-color: lightseagreen;
+}
+
+.display{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+}
+
+.card{
+    background-color: turquoise;
+    width: 7vw;
+    height: 10vh;
+    margin: 5px;
+    border-radius: 5%;
+    border: solid 1px black;
+    padding: auto;
+    overflow: auto;
+}
+  
+.card-title{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    color: crimson;
+}
+  
+.card-content{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    color: indigo;
+}
