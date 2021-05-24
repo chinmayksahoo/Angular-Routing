@@ -17,14 +17,14 @@
     <br>
     <div>
         <mat-label>User Name </mat-label>
-        <input matInput type="text" placeholder="User Name" formControlName="username">
+        <input matInput type="text" id="username" placeholder="User Name" formControlName="username">
         <span style="display: block; color: red;" *ngIf="(username.invalid) && (username.touched)">
             Username Can't be Blank
         </span>
     </div><br>
     <div>
         <mat-label>Pasword </mat-label>
-        <input matInput type="password" placeholder="Password" formControlName="password">
+        <input matInput type="password" id="password" placeholder="Password" formControlName="password">
         <span style="display: block; color: red;" *ngIf="(password.invalid) && (password.touched)">
             Password Can't be Blank
         </span>

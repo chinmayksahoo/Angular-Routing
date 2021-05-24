@@ -77,6 +77,18 @@
       "Name": "Amalia",
       "Plan": "ASO-M",
       "Duration": "25"
+    },
+    {
+      "Name": "James",
+      "Plan": "HMO",
+      "Duration": "25",
+      "id": 14
+    },
+    {
+      "Name": "Palmer",
+      "Plan": "ASO",
+      "Duration": "20",
+      "id": 15
     }
   ]
 }

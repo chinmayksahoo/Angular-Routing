@@ -11,16 +11,17 @@ import Insurance from '../Insurance';
 export class ShowInsuranceComponent implements OnInit {
 
   insurance:Insurance = new Insurance()
-  insurances:Array<Insurance> = [];
+  insurances:Array<Insurance> = [];         // Subscriber to Hot Observable
   displayedColumns = ['ID', 'Name', 'Plan', 'Duration'];
   constructor(private ser:InsuranceService, private route:Router) { 
-    this.ser.getInsurance().subscribe(item=>{
-      this.insurances = item
-    },error=>console.error(error)
-    );
+    
   }
 
   ngOnInit(): void {
+    this.ser.getInsurance().subscribe(item=>{       // Subscriber to Hot Observable
+      this.insurances = item
+    },error=>console.error(error)
+    );
   }
 
   clickCard(ins:Insurance){

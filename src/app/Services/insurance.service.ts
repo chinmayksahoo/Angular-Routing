@@ -1,23 +1,42 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import Insurance from '../Insurance';
+import { tap } from 'rxjs/operators'
 
 @Injectable({
   providedIn: 'root'
 })
 export class InsuranceService {
 
-  constructor(private client:HttpClient) { 
+  //Hot Observable
+  inss:Array<Insurance> = [];
+  subject:BehaviorSubject<Array<Insurance>> = new BehaviorSubject(this.inss);
 
+  constructor(private client:HttpClient,) { 
+    this.client.get<Array<Insurance>>("http://localhost:3001/InsuranceData").subscribe(
+      data => {this.inss = data;
+      this.subject.next(this.inss)
+      }
+    )
   }
 
   getInsurance():Observable<Array<Insurance>>{
-    return this.client.get<Array<Insurance>>("http://localhost:3001/InsuranceData")
+    //Hot Observable
+    return this.subject
+
+    //Observable
+    // return this.client.get<Array<Insurance>>("http://localhost:3001/InsuranceData")
   }
   
   addInsurance(ins:Insurance):Observable<Insurance>{
-    return this.client.post<Insurance>("http://localhost:3001/InsuranceData",ins)
+    //Hot Observable
+    return this.client.post<Insurance>("http://localhost:3001/InsuranceData",ins).pipe(tap(item => {
+      this.inss.push(item)
+      this.subject.next(this.inss)
+    }))
+    //Observable
+    // return this.client.post<Insurance>("http://localhost:3001/InsuranceData",ins)
   }
 
   updateInsurance(ins:Insurance):Observable<Insurance>{
